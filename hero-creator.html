@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <meta charset="utf-8">
+        <script type="text/javascript" src="script.js"></script>
+        <title>Dodaj herosa</title>
+    </head>
+    <body>
+        <div id="siteNavigation2">
+            <div id="tabMenu2">
+                <ul class="mainMenu2">
+                    <li id="addHero" style="display: inline-block;">
+                        <a href="hero-creator.html" style="color:white">Dodaj herosa</a>
+                    </li>
+                    <li id="editHero" style="display: inline-block;">
+                        <a style="color:white">Edytuj herosa</a>
+                    </li>
+                    <li id="deleteHero" style="display: inline-block;">
+                        <a style="color:white">Usuń herosa</a>
+                    </li>
+                    <li id="cleanBase" style="display: inline-block;">
+                        <a style="color:white">Wyczyść bazę</a>
+                    </li>
+                    <li id="loadHeros" style="display: inline-block;">
+                        <a style="color:white">Wczytaj herosów</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="index.html"><img src="images/logo.png" alt="Home page"></a>
+        </div>
+        <div class="add-hero-form">
+            <h1 style="text-align: center;">Dodaj herosa</h1>
+            <form method="POST">
+                Nazwa Bohatera:<br>
+                <input type="text" name="heroname"><br>
+                Adres/nazwa zdjęcia:<br>
+                <input type="text" name="herophoto"><br>
+                Cena wynajmu/h:<br>
+                <input type="text" name="rentprice"><br>
+                Opis Bohatera:<br>
+                <input type="text" name="herodescription"><br>
+                <div id="submit-hero" style="text-align: center">
+                    <input type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
