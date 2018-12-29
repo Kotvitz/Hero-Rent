@@ -1,0 +1,22 @@
+div#siteNavigation {
+    background-image: url('images/home-slide01.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 600px;
+    width: 1520px;
+}
+
+ul.mainMenu {
+    list-style-type: disc;
+    margin-top: 1em;
+    margin-bottom: 1 em;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 700px;
+    color: white;
+}
+
+ul.mainMenu li {
+    margin-top: 50px;
+    margin-left: 50px;
+}
