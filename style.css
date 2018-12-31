@@ -46,7 +46,7 @@ ul.mainMenu2 li {
     margin-left: 50px;
 }
 
-.add-hero-form{
+.add-hero{
 	width: 500px;
 	padding: 30px;
 	background: #FFFFFF;
@@ -57,7 +57,7 @@ ul.mainMenu2 li {
 
 }
 
-.add-hero-form input[type="text"] {
+.add-hero input[type="text"] {
     box-sizing: border-box;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -72,7 +72,7 @@ ul.mainMenu2 li {
     height: 45px;
 }
 
-.add-hero-form input[type="submit"] {
+.add-hero input[type="submit"] {
 	background-color: rgb(44, 106, 187);
 	display: inline-block;
 	cursor: pointer;
@@ -82,7 +82,13 @@ ul.mainMenu2 li {
     text-decoration: none;
 }
 
-.add-hero-form input[type="submit"]:hover {
+.add-hero input[type="submit"]:hover {
 	background:linear-gradient(to bottom, rgb(61, 84, 114) 5%,rgb(108, 125, 148) 100%);
 	background-color: rgb(61, 84, 114);
+}
+
+div#heroZone {
+    overflow: hidden;
+    margin-left: 150px;
+    margin-right: 150px;
 }

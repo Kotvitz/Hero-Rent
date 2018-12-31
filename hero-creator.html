@@ -2,8 +2,8 @@
 <html lang="pl">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <meta charset="utf-8">
         <script type="text/javascript" src="script.js"></script>
+        <meta charset="utf-8">
         <title>Dodaj herosa</title>
     </head>
     <body>
@@ -19,27 +19,27 @@
                     <li id="deleteHero" style="display: inline-block;">
                         <a style="color:white">Usuń herosa</a>
                     </li>
-                    <li id="cleanBase" style="display: inline-block;">
+                    <li id="clearBase" style="display: inline-block; cursor: pointer;" onclick="clearBase();">
                         <a style="color:white">Wyczyść bazę</a>
                     </li>
-                    <li id="loadHeros" style="display: inline-block;">
+                    <li id="loadHeroes" style="display: inline-block;">
                         <a style="color:white">Wczytaj herosów</a>
                     </li>
                 </ul>
             </div>
             <a href="index.html"><img src="images/logo.png" alt="Home page"></a>
         </div>
-        <div class="add-hero-form">
+        <div class="add-hero">
             <h1 style="text-align: center;">Dodaj herosa</h1>
-            <form method="POST">
+            <form id="hero-form" action="index.html" method="POST" onsubmit="createHero();">
                 Nazwa Bohatera:<br>
-                <input type="text" name="heroname"><br>
+                <input type="text" name="name"><br>
                 Adres/nazwa zdjęcia:<br>
-                <input type="text" name="herophoto"><br>
+                <input type="text" name="image"><br>
                 Cena wynajmu/h:<br>
-                <input type="text" name="rentprice"><br>
+                <input type="text" name="price"><br>
                 Opis Bohatera:<br>
-                <input type="text" name="herodescription"><br>
+                <input type="text" name="description"><br>
                 <div id="submit-hero" style="text-align: center">
                     <input type="submit" value="Submit">
                 </div>

@@ -2,8 +2,8 @@
 <html lang="pl">
     <head>
         <link rel="stylesheet" type="text/css" href="style.css">
-        <meta charset="utf-8">
         <script type="text/javascript" src="script.js"></script>
+        <meta charset="utf-8">
         <title>A Hero Rent</title>
     </head>
     <body>
@@ -19,15 +19,16 @@
                     <li id="deleteHero" style="display: inline-block;">
                         <a style="color:white">Usuń herosa</a>
                     </li>
-                    <li id="cleanBase" style="display: inline-block;">
+                    <li id="clearBase" style="display: inline-block; cursor: pointer;" onclick="clearBase();">
                         <a style="color:white">Wyczyść bazę</a>
                     </li>
-                    <li id="loadHeros" style="display: inline-block;">
+                    <li id="loadHeroes" style="display: inline-block; cursor: pointer;" onclick="loadHeroes();">
                         <a style="color:white">Wczytaj herosów</a>
                     </li>
                 </ul>
             </div>
             <a href="index.html"><img src="images/logo.png" alt="Home page"></a>
         </div>
+        <div id="heroZone"></div>
     </body>
 </html>
