@@ -1,40 +1,63 @@
 <!DOCTYPE html>
 <html lang="pl">
-    <head>
-        <link rel="stylesheet" type="text/css" href="style.css">
-        <script type="text/javascript" src="script.js"></script>
-        <meta charset="utf-8">
-        <title>A Hero Rent</title>
-    </head>
-    <body>
-        <div id="siteNavigation">
-            <div id="tabMenu">
-                <ul class="mainMenu">
-                    <li id="addHero" style="display: inline-block;">
-                        <a href="hero-creator.html" style="color:white">Dodaj herosa</a>
-                    </li>
-                    <li id="editHero" style="display: inline-block;">
-                        <a style="color:white">Edytuj herosa</a>
-                    </li>
-                    <li id="deleteHero" style="display: inline-block;">
-                        <a style="color:white">Usuń herosa</a>
-                    </li>
-                    <li id="clearBase" style="display: inline-block; cursor: pointer;" onclick="clearBase();">
-                        <a style="color:white">Wyczyść bazę</a>
-                    </li>
-                    <li id="loadHeroes" style="display: inline-block; cursor: pointer;" onclick="loadHeroes();">
-                        <a style="color:white">Wczytaj herosów</a>
-                    </li>
-                </ul>
-            </div>
-            <a href="index.html"><img src="images/logo.png" alt="Home page"></a>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <meta charset="utf-8">
+    <title>A Hero Rent</title>
+</head>
+
+<body>
+    <div id="siteNavigation">
+        <div id="tabMenu">
+            <ul class="mainMenu">
+                <li id="addHero" style="display: inline-block;">
+                    <a href="hero-creator.html" style="color:white">Dodaj herosa</a>
+                </li>
+                <li id="editHero" style="display: inline-block;">
+                    <a style="color:white">Edytuj herosa</a>
+                </li>
+                <li id="deleteHero" style="display: inline-block;">
+                    <a style="color:white">Usuń herosa</a>
+                </li>
+                <li id="clearBase" style="display: inline-block; cursor: pointer;" onclick="clearBase();">
+                    <a style="color:white">Wyczyść bazę</a>
+                </li>
+                <li id="loadHeroes" style="display: inline-block; cursor: pointer;" onclick="loadHeroes();">
+                    <a style="color:white">Wczytaj herosów</a>
+                </li>
+            </ul>
         </div>
-        <div id="basket">
-            <p style="font-size: 24px; text-decoration: underline; margin: 5px 10px 5px 10px; display: inline-block;">Koszyk</p>
-            <p style="font-size: 24px; display: inline-block; margin: 5px 10px 5px 1025px">Do zapłaty: </p>
-            <p id="payment" style="font-size: 24px; display: inline-block; color: red;"></p>
-            <p id="empty-basket" style="text-align: center; color: gray; display: block;">Twój koszyk jest pusty</p>
+        <button class="hamburger">&#9776;</button>
+        <div id="hamburger-menu">
+            <ul>
+                <a href="hero-creator.html" style="color: white">
+                <li>Dodaj herosa</li>
+                </a>
+                <a href="#">
+                    <li>Edytuj herosa</li>
+                </a>
+                <a href="#">
+                    <li>Usuń herosa</li>
+                </a>
+                <a href="#">
+                    <li>Wyczyść bazę</li>
+                </a>
+                <a href="#">
+                    <li>Wczytaj herosów</li>
+                </a>
+            </ul>
         </div>
-        <div id="heroZone"></div>
-    </body>
+        <a href="index.html"><img src="images/logo.png" alt="Home page"></a>
+    </div>
+    <div id="basket">
+        <p id="basket-label">Koszyk</p>
+        <p id="to-pay">Do zapłaty: </p>
+        <p id="payment"></p>
+        <p id="empty-basket">Twój koszyk jest pusty</p>
+    </div>
+    <div id="heroZone"></div>
+</body>
+
 </html>

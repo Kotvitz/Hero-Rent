@@ -1,7 +1,6 @@
 let arr = new Array();
 let arr2 = new Array();
 let heroBox = null;
-
 function createHero() {
     let hero = {};
     let data = new FormData(document.getElementById('hero-form'));
@@ -153,13 +152,12 @@ function createHeroBox(hero) {
     let heroBoxInfo = document.createElement("p");
     let heroBoxRentInfo = document.createElement("h2");
     let heroBoxImg = document.createElement("img");
-    let heroBoxDescription = document.createElement("div");
+    let heroBoxTextContent = document.createElement("div");
     let heroBoxPhoto = document.createElement("div");
-    let heroBoxRent = document.createElement("div");
     let heroBoxButton = document.createElement("button");
     heroBoxImg.src = hero.image;
-    heroBoxImg.style.width = "400px";
-    heroBoxImg.style.height = "400px";
+    heroBoxImg.style.width = "100%";
+    heroBoxImg.style.height = "auto";
     heroBox.id = hero.name + "-box";
     heroBox.className = "modal";
     heroBoxContent.className = "modal-content";
@@ -168,24 +166,23 @@ function createHeroBox(hero) {
     heroBoxInfo.innerHTML = hero.description;
     heroBoxTitle.innerHTML = "I'M THE " + hero.name.toUpperCase() + "!";
     heroBoxRentInfo.innerHTML = "WYNAJEM: " + hero.price + " ZŁ/H";
-    heroBoxDescription.id = hero.name + "-description";
-    heroBoxPhoto.style.display = "inline-block";
-    heroBoxDescription.style.display = "inline-block";
+    heroBoxTextContent.id = hero.name + "-box-text-content";
+    heroBoxTextContent.className = "hero-box-text-content";
     heroBoxPhoto.id = hero.name + "-photo";
+    heroBoxPhoto.className = "hero-box-photo";
     heroBoxPhoto.appendChild(heroBoxImg);
     heroBoxRentInfo.id = hero.name + "-rent";
     heroBoxButton.id = hero.name + "-to-basket";
     heroBoxButton.className = "rent-button";
     heroBoxButton.innerHTML = "DODAJ DO KOSZYKA";
     heroBoxButton.onclick = function () { rentHero(hero.name) };
-    heroBoxRent.appendChild(heroBoxButton);
-    heroBoxDescription.appendChild(heroBoxTitle);
-    heroBoxDescription.appendChild(heroBoxInfo);
-    heroBoxDescription.appendChild(heroBoxRentInfo);
+    heroBoxTextContent.appendChild(heroBoxTitle);
+    heroBoxTextContent.appendChild(heroBoxInfo);
+    heroBoxTextContent.appendChild(heroBoxRentInfo);
+    heroBoxTextContent.appendChild(heroBoxButton);
     heroBoxContent.appendChild(heroBoxClose);
     heroBoxContent.appendChild(heroBoxPhoto);
-    heroBoxContent.appendChild(heroBoxDescription);
-    heroBoxContent.appendChild(heroBoxRent);
+    heroBoxContent.appendChild(heroBoxTextContent);
     heroBox.appendChild(heroBoxContent);
 }
 
@@ -198,14 +195,12 @@ function createHeroProfile(heroes) {
         heroDiv.id = hero.name + "-profile";
         heroDiv.className = "hero-profile"
         img.src = hero.image;
-        img.style.width = "400px";
-        img.style.height = "400px";
+        img.className = "hero-image"
         img.style.cursor = "pointer";
         img.onclick = function () { openHeroBox(hero.name) };
-        heroName.style.fontSize = "200%";
-        heroName.style.textAlign = "center";
+        heroName.className = "hero-name";
         heroName.innerHTML = hero.name;
-        price.style.textAlign = "center";
+        price.className = "price";
         price.innerHTML = "Cena wynajmu: " + hero.price + " zł/h";
         createHeroBox(hero);
         heroDiv.appendChild(img);
@@ -216,7 +211,22 @@ function createHeroProfile(heroes) {
     }
 }
 
+function openNav() {
+    let hamburger = document.getElementsByClassName("hamburger")[0];
+    hamburger.classList.add("is-active");
+    document.getElementById("hamburger-menu").style.display = "block";
+}
+
+function closeNav() {
+    let hamburger = document.getElementsByClassName("hamburger")[0];
+    hamburger.classList.remove("is-active");
+    document.getElementById("hamburger-menu").style.display = "none";
+}
+
 document.addEventListener('DOMContentLoaded', function () {
+    let hamburger = document.getElementsByClassName("hamburger")[0];
+    hamburger.addEventListener('click', () => hamburger.classList.contains('is-active') ? closeNav() : openNav());
+    closeNav();
     if (localStorage.getItem("heroes") === null && localStorage.getItem("basket") === null) {
         localStorage.setItem("heroes", JSON.stringify(arr));
         localStorage.setItem("basket", JSON.stringify(arr2));

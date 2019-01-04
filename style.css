@@ -8,7 +8,6 @@ div#siteNavigation {
     background-repeat: no-repeat;
     background-size: 100%;
     height: 600px;
-    width: 1520px;
 }
 
 div#siteNavigation2 {
@@ -17,23 +16,212 @@ div#siteNavigation2 {
     background-size: 100%;
 }
 
-ul.mainMenu {
-    list-style-type: disc;
-    margin-top: 1em;
-    margin-bottom: 1 em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 700px;
+@media screen and (max-width: 760px) {
+    ul.mainMenu {
+        display: none;
+    }
+
+    ul.mainMenu2 {
+        display: none;
+    }
+
+    .hero-box-text-content {
+        margin: 0 auto;
+        font-size: 70%;
+    }
+
+    .hamburger {
+        background: none;
+        position: absolute;
+        top: 0;
+        right: 0;
+        line-height: 45px;
+        padding: 5px 15px 0px 15px;
+        color: #FFFFFF;
+        border: 0;
+        font-size: 1.4em;
+        font-weight: bold;
+        cursor: pointer;
+        outline: none;
+        z-index: 10000000000000;
+        display: block;
+    }
+
+    div#hamburger-menu {
+        z-index: 1000000;
+        font-weight: bold;
+        font-size: 0.8em;
+        width: 100%;
+        background: rgb(44, 106, 187);
+        position: absolute;
+        text-align: center;
+        font-size: 12px;
+        display: block;
+    }
+
+    .hero-profile {
+        display: block;
+        float: left;
+    }
+
+    .hero-image {
+        width: 100%;
+        height: auto;
+    }
+
+    p#basket-label {
+        font-size: 14px;
+        text-decoration: underline;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    p#to-pay {
+        font-size: 14px;
+        display: inline-block;
+    }
+    p#payment {
+        font-size: 14px;
+        display: inline-block;
+        color: red;
+    }
+    p#empty-basket {
+        font-size: 14px;
+        text-align: center;
+        color: gray;
+        display: block;
+    }
 }
 
-ul.mainMenu2 {
-    list-style-type: disc;
-    margin-top: 1em;
-    margin-bottom: 1 em;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 700px;
-    padding-top: 30px;
+@media screen and (min-width: 761px) and (max-width: 1024px) {
+    ul.mainMenu {
+        display: block;
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1 em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 700px;
+    }
+
+    ul.mainMenu2 {
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1 em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 700px;
+        padding-top: 30px;
+    }
+
+    .hero-profile {
+        display: block;
+        float: left;
+        margin-left: 3px;
+        margin-top: 50px;
+    }
+
+    .hero-image {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-box-text-content {
+        margin: 0 auto;
+        font-size: 80%;
+    }
+
+    p#basket-label {
+        font-size: 14px;
+        text-decoration: underline;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    p#to-pay {
+        font-size: 14px;
+        display: inline-block;
+    }
+    p#payment {
+        font-size: 14px;
+        display: inline-block;
+        color: red;
+    }
+    p#empty-basket {
+        font-size: 14px;
+        text-align: center;
+        color: gray;
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    ul.mainMenu {
+        display: block;
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1 em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 700px;
+    }
+
+    ul.mainMenu2 {
+        list-style-type: disc;
+        margin-top: 1em;
+        margin-bottom: 1 em;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 700px;
+        padding-top: 30px;
+    }
+
+    .hero-profile {
+        display: block;
+        float: left;
+        margin-right: 5px;
+        margin-top: 50px;
+    }
+
+    .hero-image {
+        width: 400px;
+        height: 400px;
+    }
+
+    .hero-name {
+        font-size: 200%;
+        text-align: center;
+    }
+
+    .price {
+        text-align: center;
+    }
+
+    .hero-box-text-content {
+        overflow: hidden;
+        margin: 0 auto;
+        font-size: 100%;
+    }
+
+    p#basket-label {
+        font-size: 24px;
+        text-decoration: underline;
+        margin: 5px 10px 5px 10px;
+        display: inline-block;
+    }
+    p#to-pay {
+        font-size: 24px;
+        display: inline-block;
+        margin: 5px 10px 5px 1025px;
+    }
+    p#payment {
+        font-size: 24px;
+        display: inline-block;
+        color: red;
+    }
+    p#empty-basket {
+        text-align: center;
+        color: gray;
+        display: block;
+    }
 }
 
 ul.mainMenu li {
@@ -46,28 +234,79 @@ ul.mainMenu2 li {
     margin-left: 50px;
 }
 
-.add-hero{
-	width: 500px;
-	padding: 30px;
-	background: #FFFFFF;
-	margin: 50px auto;
-	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-	-webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+@media screen and (min-width: 761px) {
+    .hamburger {
+        display: none;
+    }
 
+    div#hamburger-menu {
+        display: none;
+    }
+}
+
+div#hamburger-menu ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    list-style-image: none;
+}
+
+div#hamburger-menu li {
+    display: block;
+    padding: 15px 0 15px 0;
+    border-bottom: #FFFFFF 1px solid;
+}
+
+div#hamburger-menu li:hover {
+    display: block;
+    background: linear-gradient(to bottom, rgb(61, 84, 114) 5%, rgb(108, 125, 148) 100%);
+    background-color: rgb(61, 84, 114);
+    padding: 15px 0 15px 0;
+    border-bottom: #FFFFFF 1px solid;
+}
+
+div#hamburger-menu ul li a {
+    text-decoration: none;
+    margin: 0px;
+    color: #FFFFFF;
+}
+
+div#hamburger-menu ul li a:hover {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+div#hamburger-menu a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+div#hamburger-menu a:hover {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.add-hero {
+    width: 500px;
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
 }
 
 .add-hero input[type="text"] {
     box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	outline: none;
-	display: block;
-	width: 100%;
-	padding: 7px;
-	border: none;
-	border-bottom: 1px solid #ddd;
-	background: transparent;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 100%;
+    padding: 7px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+    background: transparent;
     margin-bottom: 10px;
     height: 45px;
 }
@@ -75,23 +314,51 @@ ul.mainMenu2 li {
 .add-hero input[type="submit"] {
     background-color: rgb(44, 106, 187);
     border: none;
-	display: inline-block;
-	cursor: pointer;
-	color: #FFFFFF;
-	font-size: 14px;
+    display: inline-block;
+    cursor: pointer;
+    color: #FFFFFF;
+    font-size: 14px;
     padding: 8px 18px;
     text-decoration: none;
 }
 
 .add-hero input[type="submit"]:hover {
-	background:linear-gradient(to bottom, rgb(61, 84, 114) 5%,rgb(108, 125, 148) 100%);
-	background-color: rgb(61, 84, 114);
+    background: linear-gradient(to bottom, rgb(61, 84, 114) 5%, rgb(108, 125, 148) 100%);
+    background-color: rgb(61, 84, 114);
 }
 
-.hero-profile {
-    float: left;
-    margin-right: 5px;
-    margin-top: 50px;
+@media screen and (max-width: 1024px) {
+    .hero-name {
+        font-size: 100%;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 50%;
+        text-align: center;
+    }
+
+    p#basket-label {
+        font-size: 14px;
+        text-decoration: underline;
+        margin: 0 auto;
+        display: inline-block;
+    }
+    p#to-pay {
+        font-size: 14px;
+        display: inline-block;
+    }
+    p#payment {
+        font-size: 14px;
+        display: inline-block;
+        color: red;
+    }
+    p#empty-basket {
+        font-size: 14px;
+        text-align: center;
+        color: gray;
+        display: block;
+    }
 }
 
 div#basket {
@@ -106,16 +373,16 @@ div#heroZone {
 }
 
 .modal {
-    display: none; 
-    position: fixed; 
-    z-index: 1;  
+    display: none;
+    position: fixed;
+    z-index: 1;
     left: 0;
     top: 0;
-    width: 100%; 
+    width: 100%;
     height: 100%;
-    overflow: auto; 
-    background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); 
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .modal-content {
@@ -124,6 +391,12 @@ div#heroZone {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    overflow: hidden;
+}
+
+.hero-box-photo {
+    float: left;
+    margin: 10px 25px 10px 10px;
 }
 
 .close {
@@ -132,9 +405,8 @@ div#heroZone {
     font-size: 28px;
     font-weight: bold;
 }
-  
-  .close:hover,
-  .close:focus {
+
+.close:hover, .close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -150,8 +422,8 @@ div#heroZone {
 }
 
 .rent-button:hover:enabled {
-    background:linear-gradient(to bottom, rgb(61, 114, 68) 5%,rgb(108, 148, 111) 100%);
-	background-color: rgb(61, 114, 68);
+    background: linear-gradient(to bottom, rgb(61, 114, 68) 5%, rgb(108, 148, 111) 100%);
+    background-color: rgb(61, 114, 68);
 }
 
 .rent-button:disabled {
@@ -185,6 +457,6 @@ div#heroZone {
 }
 
 .removing-hero-from-basket:hover {
-    background:linear-gradient(to bottom, rgb(114, 61, 61) 5%,rgb(148, 108, 108) 100%);
-	background-color: rgb(114, 61, 61);
+    background: linear-gradient(to bottom, rgb(114, 61, 61) 5%, rgb(148, 108, 108) 100%);
+    background-color: rgb(114, 61, 61);
 }
