@@ -4,13 +4,13 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
     <meta charset="utf-8">
-    <title>Dodaj herosa</title>
+    <title>Edytuj herosa</title>
 </head>
 
 <body>
-    <script type="module" src="hero-manager.js"></script>
+
     <div class="creatorNav">
-        <div id="tabMenu2">
+        <div id="tabMenu3">
             <ul class="mainMenu2">
                 <li id="addHero" style="display: inline-block;">
                     <a href="hero-creator.html" style="color:white">Dodaj herosa</a>
@@ -52,10 +52,15 @@
         <a href="index.html"><img src="images/logo.png" alt="Home page"></a>
     </div>
     <div class="hero-action">
-        <h1 style="text-align: center;">Dodaj herosa</h1>
+        <h1 style="text-align: center;">Edytuj herosa</h1>
         <form id="hero-form">
-            Nazwa Bohatera:<br>
-            <input type="text" name="name"><br>
+            Wybierz istniejącego herosa:<br>
+            <select>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="opel">Opel</option>
+                <option value="audi">Audi</option>
+            </select><br>
             Adres/nazwa zdjęcia:<br>
             <input type="text" name="image"><br>
             Cena wynajmu/h:<br>
@@ -64,7 +69,7 @@
             <input type="text" name="description"><br>
         </form>
         <div id="submit-hero" style="text-align: center">
-            <button id="submit-button" type="submit" onclick="createHero();">Submit</button>
+            <button id="submit-button" type="submit" onclick="">Submit</button>
         </div>
     </div>
 </body>

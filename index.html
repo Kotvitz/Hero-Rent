@@ -3,23 +3,23 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script type="text/javascript" src="script.js"></script>
     <meta charset="utf-8">
     <title>A Hero Rent</title>
 </head>
 
 <body>
-    <div id="siteNavigation">
+    <script type="module" src="main-script.js"></script>
+    <div class="indexNav">
         <div id="tabMenu">
             <ul class="mainMenu">
                 <li id="addHero" style="display: inline-block;">
                     <a href="hero-creator.html" style="color:white">Dodaj herosa</a>
                 </li>
                 <li id="editHero" style="display: inline-block;">
-                    <a style="color:white">Edytuj herosa</a>
+                    <a href="hero-editor.html" style="color:white">Edytuj herosa</a>
                 </li>
                 <li id="deleteHero" style="display: inline-block;">
-                    <a style="color:white">Usuń herosa</a>
+                    <a href="hero-remover.html" style="color:white">Usuń herosa</a>
                 </li>
                 <li id="clearBase" style="display: inline-block; cursor: pointer;" onclick="clearBase();">
                     <a style="color:white">Wyczyść bazę</a>
@@ -30,15 +30,15 @@
             </ul>
         </div>
         <button class="hamburger">&#9776;</button>
-        <div id="hamburger-menu">
+        <div id="hamburger-menu" class="little-menu">
             <ul>
                 <a href="hero-creator.html" style="color: white">
-                <li>Dodaj herosa</li>
+                    <li>Dodaj herosa</li>
                 </a>
-                <a href="#">
+                <a href="hero-editor.html">
                     <li>Edytuj herosa</li>
                 </a>
-                <a href="#">
+                <a href="hero-remover.html">
                     <li>Usuń herosa</li>
                 </a>
                 <a href="#">
@@ -51,13 +51,13 @@
         </div>
         <a href="index.html"><img src="images/logo.png" alt="Home page"></a>
     </div>
-    <div id="basket">
-        <p id="basket-label">Koszyk</p>
-        <p id="to-pay">Do zapłaty: </p>
-        <p id="payment"></p>
-        <p id="empty-basket">Twój koszyk jest pusty</p>
+    <div id="your-basket" class="basket">
+        <p class="basket-label">Koszyk</p>
+        <p class="to-pay">Do zapłaty: </p>
+        <p class="payment"></p>
+        <p class="empty-basket">Twój koszyk jest pusty</p>
     </div>
-    <div id="heroZone"></div>
+    <div id="heroZone" class="mainZone"></div>
 </body>
 
 </html>
